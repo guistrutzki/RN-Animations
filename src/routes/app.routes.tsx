@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import HomeScreen from '../screens/Home';
 import AnimatedAPIScreen from '../screens/AnimatedAPI';
+import PanResponderScreen from '../screens/PanResponder';
 
 const App = createStackNavigator();
 
@@ -31,7 +32,18 @@ const AppRoutes: FC = () => {
         component={AnimatedAPIScreen}
         name="AnimatedAPIScreen"
         options={{
-          title: 'Animated API',
+          title: 'Animated',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            fontSize: 18
+          }
+        }}
+      />
+      <App.Screen
+        component={PanResponderScreen}
+        name="PanResponderScreen"
+        options={{
+          title: 'PanResponder',
           headerTitleStyle: {
             fontWeight: 'bold',
             fontSize: 18

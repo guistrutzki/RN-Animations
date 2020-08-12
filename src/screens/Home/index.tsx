@@ -1,12 +1,15 @@
 import React, { FC } from 'react';
-import { StatusBar, FlatList, ListRenderItem } from 'react-native';
+import { StatusBar, FlatList } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import { styles } from './styles';
 
 import HomeCard from '../../components/HomeCard';
 
-const screenList = [{ title: 'Animated API', routeName: 'AnimatedAPIScreen' }];
+const screenList = [
+  { title: 'Animated', routeName: 'AnimatedAPIScreen' },
+  { title: 'PanResponder', routeName: 'PanResponderScreen' }
+];
 
 const Home: FC = () => {
   const navigation = useNavigation();
