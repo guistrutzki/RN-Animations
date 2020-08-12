@@ -7,7 +7,7 @@ const AnimatedAPI: FC = () => {
   const [emojiPosY] = useState(new Animated.Value(0));
   const [emojiPosX] = useState(new Animated.Value(0));
   const [emojiScale] = useState(new Animated.Value(1));
-  const [emojiOpacity] = useState(new Animated.Value(0));
+  const [emojiOpacity] = useState(new Animated.Value(1));
 
   /**
    * * Exemplo de interpolate
@@ -31,11 +31,11 @@ const AnimatedAPI: FC = () => {
    * * Animação de timing
    */
 
-  // const animation = Animated.timing(emojiPosY, {
-  //   toValue: 200,
-  //   duration: 2000,
-  //   useNativeDriver: true
-  // });
+  const animation = Animated.timing(emojiPosY, {
+    toValue: 200,
+    duration: 2000,
+    useNativeDriver: true
+  });
 
   /**
    * * Animações em sequência
@@ -65,25 +65,54 @@ const AnimatedAPI: FC = () => {
    * * Animações em pararelo
    */
 
-  const animation = Animated.parallel([
-    Animated.timing(emojiPosY, {
-      toValue: 300,
-      duration: 2000,
-      useNativeDriver: true
-    }),
+  // const animation = Animated.parallel([
+  //   Animated.timing(emojiPosY, {
+  //     toValue: 300,
+  //     duration: 2000,
+  //     useNativeDriver: true
+  //   }),
 
-    Animated.timing(emojiPosX, {
-      toValue: 100,
-      duration: 2000,
-      useNativeDriver: true
-    }),
+  //   Animated.timing(emojiPosX, {
+  //     toValue: 100,
+  //     duration: 2000,
+  //     useNativeDriver: true
+  //   }),
 
-    Animated.timing(emojiOpacity, {
-      toValue: 1,
-      duration: 2000,
-      useNativeDriver: true
-    })
-  ]);
+  //   Animated.timing(emojiOpacity, {
+  //     toValue: 1,
+  //     duration: 2000,
+  //     useNativeDriver: true
+  //   })
+  // ]);
+
+  /**
+   * * Animações spring
+   */
+
+  // const animation = Animated.parallel([
+  //   Animated.spring(emojiPosY, {
+  //     toValue: 300,
+  //     friction: 1,
+  //     tension: 120,
+  //     useNativeDriver: true
+  //   }),
+
+  //   Animated.timing(emojiOpacity, {
+  //     toValue: 1,
+  //     duration: 2000,
+  //     useNativeDriver: true
+  //   })
+  // ]);
+
+  /**
+   * * Animações decay
+   */
+
+  // const animation = Animated.decay(emojiPosY, {
+  //   velocity: 0.7,
+  //   deceleration: 0.997,
+  //   useNativeDriver: true
+  // });
 
   useEffect(() => {
     animation.start();
