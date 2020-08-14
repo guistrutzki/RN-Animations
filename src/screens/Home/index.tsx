@@ -8,7 +8,8 @@ import HomeCard from '../../components/HomeCard';
 
 const screenList = [
   { title: 'Animated', routeName: 'AnimatedAPIScreen' },
-  { title: 'PanResponder', routeName: 'PanResponderScreen' }
+  { title: 'PanResponder', routeName: 'PanResponderScreen' },
+  { title: 'Transitions', routeName: 'Transitions' }
 ];
 
 const Home: FC = () => {

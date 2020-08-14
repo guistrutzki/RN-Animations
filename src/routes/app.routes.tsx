@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from '../screens/Home';
 import AnimatedAPIScreen from '../screens/AnimatedAPI';
 import PanResponderScreen from '../screens/PanResponder';
+import Transitions from '../screens/Transitions';
 
 const App = createStackNavigator();
 
@@ -44,6 +45,17 @@ const AppRoutes: FC = () => {
         name="PanResponderScreen"
         options={{
           title: 'PanResponder',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            fontSize: 18
+          }
+        }}
+      />
+      <App.Screen
+        component={Transitions}
+        name="Transitions"
+        options={{
+          title: 'Transitions',
           headerTitleStyle: {
             fontWeight: 'bold',
             fontSize: 18
