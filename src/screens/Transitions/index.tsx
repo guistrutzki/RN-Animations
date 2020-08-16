@@ -38,7 +38,9 @@ const Transtions: FC = () => {
           return {
             transform: [
               { translateX: origin.x },
-              { rotate },
+              {
+                rotate: `${rotate}rad`
+              },
               { translateX: -origin.x }
             ]
           };

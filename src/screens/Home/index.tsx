@@ -10,6 +10,7 @@ const screenList = [
   { title: 'Animated', routeName: 'AnimatedAPIScreen' },
   { title: 'PanResponder', routeName: 'PanResponderScreen' },
   { title: 'Transitions', routeName: 'Transitions' },
+  { title: 'Shared-element', routeName: 'SharedElementScreen' },
   { title: 'Lottie', routeName: 'LottieScreen' }
 ];
 
@@ -19,6 +20,7 @@ const Home: FC = () => {
     <>
       <StatusBar barStyle="light-content" />
       <FlatList
+        keyExtractor={(item) => item.title}
         style={styles.flatList}
         contentContainerStyle={styles.flatListContainer}
         data={screenList}
