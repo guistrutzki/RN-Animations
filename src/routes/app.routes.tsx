@@ -9,6 +9,7 @@ import Transitions from '../screens/Transitions';
 import LottieScreen from '../screens/LottieScreen';
 import SharedElementScreen from '../screens/SharedElementScreen';
 import SharedElementSecondScreen from '../screens/SharedElementSecondScreen';
+import GestureHandlerScreen from '../screens/GestureHandlerScreen';
 
 interface ShareElementSecondScreenRouteParams {
   data: {
@@ -24,6 +25,7 @@ export type AppStackParams = {
   LottieScreen: undefined;
   SharedElementScreen: undefined;
   SharedElementSecondScreen: ShareElementSecondScreenRouteParams;
+  GestureHandlerScreen: undefined;
 };
 
 const App = createSharedElementStackNavigator<AppStackParams>();
@@ -120,6 +122,18 @@ const AppRoutes: FC = () => {
             };
           }
         })}
+      />
+
+      <App.Screen
+        component={GestureHandlerScreen}
+        name="GestureHandlerScreen"
+        options={{
+          title: 'Gesture Handler',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            fontSize: 18
+          }
+        }}
       />
     </App.Navigator>
   );

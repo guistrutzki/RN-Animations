@@ -11,7 +11,8 @@ const screenList = [
   { title: 'PanResponder', routeName: 'PanResponderScreen' },
   { title: 'Transitions', routeName: 'Transitions' },
   { title: 'Shared-element', routeName: 'SharedElementScreen' },
-  { title: 'Lottie', routeName: 'LottieScreen' }
+  { title: 'Lottie', routeName: 'LottieScreen' },
+  { title: 'GestureHandler', routeName: 'GestureHandlerScreen' }
 ];
 
 const Home: FC = () => {
