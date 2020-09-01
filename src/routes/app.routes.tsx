@@ -114,16 +114,6 @@ const AppRoutes: FC = () => {
         sharedElements={(route, otherRoute, showing) => {
           return [{ id: 'image' }];
         }}
-        options={() => ({
-          headerBackTitleVisible: false,
-          cardStyleInterpolator: ({ current: { progress } }) => {
-            return {
-              cardStyle: {
-                opacity: progress
-              }
-            };
-          }
-        })}
       />
 
       <App.Screen

@@ -42,6 +42,7 @@ const Transtions: FC = () => {
                 rotate: `${rotate}rad`
               },
               { translateX: -origin.x }
+              // { translateY }
             ]
           };
         });

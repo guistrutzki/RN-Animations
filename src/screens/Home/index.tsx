@@ -10,10 +10,10 @@ const screenList = [
   { title: 'Animated', routeName: 'AnimatedAPIScreen' },
   { title: 'PanResponder', routeName: 'PanResponderScreen' },
   { title: 'Transitions', routeName: 'Transitions' },
-  { title: 'Shared-element', routeName: 'SharedElementScreen' },
   { title: 'Lottie', routeName: 'LottieScreen' },
-  { title: 'GestureHandler', routeName: 'GestureHandlerScreen' },
-  { title: 'Animatable', routeName: 'AnimatableScreen' }
+  { title: 'Animatable', routeName: 'AnimatableScreen' },
+  { title: 'Shared-element', routeName: 'SharedElementScreen' },
+  { title: 'GestureHandler', routeName: 'GestureHandlerScreen' }
 ];
 
 const Home: FC = () => {
