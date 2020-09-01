@@ -5,6 +5,7 @@ export const styles = StyleSheet.create({
   flatListContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 40
+    marginTop: 40,
+    paddingBottom: 80
   }
 });

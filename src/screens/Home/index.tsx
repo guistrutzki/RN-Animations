@@ -12,7 +12,8 @@ const screenList = [
   { title: 'Transitions', routeName: 'Transitions' },
   { title: 'Shared-element', routeName: 'SharedElementScreen' },
   { title: 'Lottie', routeName: 'LottieScreen' },
-  { title: 'GestureHandler', routeName: 'GestureHandlerScreen' }
+  { title: 'GestureHandler', routeName: 'GestureHandlerScreen' },
+  { title: 'Animatable', routeName: 'AnimatableScreen' }
 ];
 
 const Home: FC = () => {
@@ -21,7 +22,7 @@ const Home: FC = () => {
     <>
       <StatusBar barStyle="light-content" />
       <FlatList
-        keyExtractor={(item) => item.title}
+        keyExtractor={(item): string => item.title}
         style={styles.flatList}
         contentContainerStyle={styles.flatListContainer}
         data={screenList}

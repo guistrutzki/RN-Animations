@@ -10,6 +10,7 @@ import LottieScreen from '../screens/LottieScreen';
 import SharedElementScreen from '../screens/SharedElementScreen';
 import SharedElementSecondScreen from '../screens/SharedElementSecondScreen';
 import GestureHandlerScreen from '../screens/GestureHandlerScreen';
+import AnimatableScreen from '../screens/AnimatableScreen';
 
 interface ShareElementSecondScreenRouteParams {
   data: {
@@ -26,6 +27,7 @@ export type AppStackParams = {
   SharedElementScreen: undefined;
   SharedElementSecondScreen: ShareElementSecondScreenRouteParams;
   GestureHandlerScreen: undefined;
+  AnimatableScreen: undefined;
 };
 
 const App = createSharedElementStackNavigator<AppStackParams>();
@@ -129,6 +131,17 @@ const AppRoutes: FC = () => {
         name="GestureHandlerScreen"
         options={{
           title: 'Gesture Handler',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            fontSize: 18
+          }
+        }}
+      />
+      <App.Screen
+        component={AnimatableScreen}
+        name="AnimatableScreen"
+        options={{
+          title: 'Animatable',
           headerTitleStyle: {
             fontWeight: 'bold',
             fontSize: 18

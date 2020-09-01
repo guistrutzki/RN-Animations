@@ -97,7 +97,7 @@ const GestureHandlerScreen: FC = () => {
               justifyContent: 'center',
               padding: SPACING * 2
             }}
-            renderItem={({ item, index }) => {
+            renderItem={({ item, index }): JSX.Element => {
               const inputRange = [index - 1, index, index + 1];
               const translateX = scrollXAnimated.interpolate({
                 inputRange,

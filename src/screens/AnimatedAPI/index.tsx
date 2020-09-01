@@ -4,6 +4,7 @@ import { Animated } from 'react-native';
 import { Container, EmojiText, EmojiContainer } from './styles';
 
 const AnimatedAPI: FC = () => {
+  // * Criar o estado ou referencia inicial do valor utilizando o Animated.Value()
   const [emojiPosY] = useState(new Animated.Value(0));
   const [emojiPosX] = useState(new Animated.Value(0));
   const [emojiScale] = useState(new Animated.Value(1));
@@ -17,6 +18,7 @@ const AnimatedAPI: FC = () => {
   //   outputRange: [0, 1]
   // });
 
+  // * Passando os valores da animação para o estilo do elemento
   const animationsStyle = {
     transform: [
       { translateY: emojiPosY },
@@ -109,7 +111,7 @@ const AnimatedAPI: FC = () => {
    */
 
   // const animation = Animated.decay(emojiPosY, {
-  //   velocity: 0.7,
+  // velocity: 0.7,
   //   deceleration: 0.997,
   //   useNativeDriver: true
   // });
